@@ -4,13 +4,10 @@
 Summary:	Command line utilities to access digital cameras
 Name:		gphoto2
 Version:	2.3.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	LGPL
 Group:		Graphics
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/gphoto/%{name}-%{version}%{?extraversion:%extraversion}.tar.bz2
-
-#Source: http://sourceforge.net/projects/gphoto/%{name}-cvs20020808.tar.bz2
-
 Url:		http://sourceforge.net/projects/gphoto/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Obsoletes:	hackgphoto2
@@ -35,10 +32,8 @@ This package contains the command-line utility gphoto2.
 %prep
 %setup -q -n %{name}-%{version}%{?extraversion:%extraversion}
 rm -rf ${RPM_BUILD_DIR}/%{name}
-#setup -q -n %{name}
 
 %build
-
 # CVS version needs "./autogen.sh"
 #./autogen.sh
 %configure2_5x
@@ -52,7 +47,6 @@ rm -rf ${RPM_BUILD_ROOT}
 
 %find_lang %{name}
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -61,5 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %doc NEWS ChangeLog README TODO
 %{_mandir}/*/*
-
 
