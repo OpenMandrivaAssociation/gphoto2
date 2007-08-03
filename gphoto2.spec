@@ -1,17 +1,18 @@
-#define extraversion rc1
+%define name	gphoto2
+%define version	2.4.0
+%define release	%mkrel 1
+
 %define extraversion %nil
 
 Summary:	Command line utilities to access digital cameras
-Name:		gphoto2
-Version:	2.3.1
-Release:	%mkrel 2
-License:	LGPL
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+License:	GPL+
 Group:		Graphics
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/gphoto/%{name}-%{version}%{?extraversion:%extraversion}.tar.bz2
 Url:		http://sourceforge.net/projects/gphoto/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Obsoletes:	hackgphoto2
-Provides:	hackgphoto2
 Conflicts:	libgphoto2 < 2.1.1
 Requires:	libgphoto-hotplug
 BuildRequires:	glib-devel libusb-devel >= 0.1.6 zlib-devel findutils perl
@@ -25,7 +26,7 @@ framework that lets you download images from several different
 digital camera models, including the newer models with USB
 connections. Note that
 a) for some older camera models you must use the old "gphoto" package.
-b) for USB mass storage models you must use the driver in the kernel
+b) for USB mass storage models you must use the driver in the kernel.
 
 This package contains the command-line utility gphoto2.
 
@@ -34,15 +35,11 @@ This package contains the command-line utility gphoto2.
 rm -rf ${RPM_BUILD_DIR}/%{name}
 
 %build
-# CVS version needs "./autogen.sh"
-#./autogen.sh
 %configure2_5x
-
 %make
 
 %install
 rm -rf ${RPM_BUILD_ROOT}
-
 %makeinstall
 
 %find_lang %{name}
@@ -55,4 +52,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %doc NEWS ChangeLog README TODO
 %{_mandir}/*/*
-
