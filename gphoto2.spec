@@ -12,7 +12,6 @@ License:	GPL+
 Group:		Graphics
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/gphoto/%{name}-%{version}%{?extraversion:%extraversion}.tar.bz2
 Url:		http://sourceforge.net/projects/gphoto/
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Conflicts:	libgphoto2 < 2.1.1
 Requires:	libgphoto-hotplug
 BuildRequires:	glib-devel libusb-devel >= 0.1.6 zlib-devel findutils perl
