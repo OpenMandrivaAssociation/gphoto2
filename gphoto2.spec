@@ -1,6 +1,6 @@
 %define name	gphoto2
-%define version	2.4.3
-%define release	%mkrel 2
+%define version	2.4.5
+%define release	%mkrel 1
 
 %define extraversion %nil
 
@@ -15,10 +15,14 @@ Url:		http://sourceforge.net/projects/gphoto/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Conflicts:	libgphoto2 < 2.1.1
 Requires:	libgphoto-hotplug
-BuildRequires:	glib-devel libusb-devel >= 0.1.6 zlib-devel findutils perl
-BuildRequires:	libgphoto-devel >= 2.1.99
-BuildRequires:	libexif-devel libaa-devel libcdk-devel
-BuildRequires:	libpopt-devel readline-devel libjpeg-devel
+BuildRequires:	gphoto2-devel >= %{version}
+BuildRequires:	cdk-devel
+BuildRequires:	libexif-devel >= 0.3.2
+BuildRequires:	jpeg-devel
+BuildRequires:	ncurses-devel
+BuildRequires:	libaa-devel
+BuildRequires:	libpopt-devel
+BuildRequires:	readline-devel
 
 %description
 The gPhoto2 project is a universal, free application and library
@@ -32,7 +36,6 @@ This package contains the command-line utility gphoto2.
 
 %prep
 %setup -q -n %{name}-%{version}%{?extraversion:%extraversion}
-rm -rf ${RPM_BUILD_DIR}/%{name}
 
 %build
 %configure2_5x
@@ -40,7 +43,7 @@ rm -rf ${RPM_BUILD_DIR}/%{name}
 
 %install
 rm -rf ${RPM_BUILD_ROOT}
-%makeinstall
+%makeinstall_std
 
 %find_lang %{name}
 
@@ -49,6 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%{_bindir}/*
 %doc NEWS ChangeLog README TODO
+%{_bindir}/*
 %{_mandir}/*/*
