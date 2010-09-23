@@ -1,5 +1,5 @@
 %define name	gphoto2
-%define version	2.4.8
+%define version	2.4.10
 %define release	%mkrel 1
 
 %define extraversion %nil
