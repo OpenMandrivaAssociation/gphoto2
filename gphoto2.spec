@@ -1,18 +1,13 @@
-%define name	gphoto2
-%define version	2.4.11
-%define release	%mkrel 2
-
 %define extraversion %nil
 
 Summary:	Command line utilities to access digital cameras
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		gphoto2
+Version:	2.4.14
+Release:	1
 License:	GPL+
 Group:		Graphics
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/gphoto/%{name}-%{version}%{?extraversion:%extraversion}.tar.bz2
 Url:		http://sourceforge.net/projects/gphoto/
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Conflicts:	libgphoto2 < 2.1.1
 Requires:	libgphoto-hotplug
 BuildRequires:	gphoto2-devel >= %{version}
@@ -42,16 +37,11 @@ This package contains the command-line utility gphoto2.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %find_lang %{name}
 
-%clean
-rm -rf %{buildroot}
-
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc NEWS ChangeLog README TODO
 %{_bindir}/*
 %{_mandir}/*/*
