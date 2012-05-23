@@ -16,7 +16,7 @@ BuildRequires:	libexif-devel >= 0.3.2
 BuildRequires:	jpeg-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	libaa-devel
-BuildRequires:	libpopt-devel
+BuildRequires:	popt-devel
 BuildRequires:	readline-devel
 
 %description
