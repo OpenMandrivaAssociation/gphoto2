@@ -2,12 +2,12 @@
 
 Summary:	Command line utilities to access digital cameras
 Name:		gphoto2
-Version:	2.4.14
+Version:	2.5.0
 Release:	1
 License:	GPL+
 Group:		Graphics
-Source0:	http://heanet.dl.sourceforge.net/sourceforge/gphoto/%{name}-%{version}%{?extraversion:%extraversion}.tar.bz2
 Url:		http://sourceforge.net/projects/gphoto/
+Source0:	http://heanet.dl.sourceforge.net/sourceforge/gphoto/%{name}-%{version}%{?extraversion:%extraversion}.tar.bz2
 Conflicts:	libgphoto2 < 2.1.1
 Requires:	libgphoto-hotplug
 BuildRequires:	gphoto2-devel >= %{version}
