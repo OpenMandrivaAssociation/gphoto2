@@ -10,7 +10,7 @@ Url:		http://sourceforge.net/projects/gphoto/
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/gphoto/%{name}-%{version}%{?extraversion:%extraversion}.tar.bz2
 Conflicts:	libgphoto2 < 2.1.1
 Requires:	libgphoto-hotplug
-BuildRequires:	gphoto-devel >= %{version}
+BuildRequires:	libgphoto-devel >= %{version}
 BuildRequires:	cdk-devel
 BuildRequires:	libexif-devel >= 0.3.2
 BuildRequires:	jpeg-devel
