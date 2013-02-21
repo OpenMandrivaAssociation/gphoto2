@@ -2,7 +2,7 @@
 
 Summary:	Command line utilities to access digital cameras
 Name:		gphoto2
-Version:	2.5.0
+Version:	2.5.1
 Release:	1
 License:	GPL+
 Group:		Graphics
