@@ -16,7 +16,7 @@ BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(libgphoto2) >= %{version}
 BuildRequires:	pkgconfig(ncurses)
-BuildRequires:	pkgconfig(popt
+BuildRequires:	pkgconfig(popt)
 Requires:	libgphoto-common
 
 %description
