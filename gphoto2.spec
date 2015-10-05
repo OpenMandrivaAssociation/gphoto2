@@ -1,4 +1,6 @@
 %define extraversion %nil
+# disable for now
+%define _disable_lto 1
 
 Summary:	Command line utilities to access digital cameras
 Name:		gphoto2
