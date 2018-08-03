@@ -43,6 +43,7 @@ This package contains the command-line utility gphoto2.
 
 %install
 %makeinstall_std
+rm -rf  %{buildroot}%{_docdir}/%{name}
 
 %find_lang %{name}
 
