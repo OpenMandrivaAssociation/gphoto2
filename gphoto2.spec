@@ -5,7 +5,7 @@
 Summary:	Command line utilities to access digital cameras
 Name:		gphoto2
 Version:	2.5.15
-Release:	1
+Release:	2
 License:	GPL+
 Group:		Graphics
 Url:		http://sourceforge.net/projects/gphoto/
@@ -19,6 +19,9 @@ BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(libgphoto2) >= %{version}
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(popt)
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	gpm-devel
+BuildRequires:	pkgconfig(slang)
 Requires:	libgphoto-common
 
 %description
