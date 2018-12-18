@@ -4,8 +4,8 @@
 
 Summary:	Command line utilities to access digital cameras
 Name:		gphoto2
-Version:	2.5.15
-Release:	3
+Version:	2.5.20
+Release:	1
 License:	GPL+
 Group:		Graphics
 Url:		http://sourceforge.net/projects/gphoto/
@@ -35,14 +35,14 @@ b) for USB mass storage models you must use the driver in the kernel.
 This package contains the command-line utility gphoto2.
 
 %prep
-%setup -qn %{name}-%{version}%{?extraversion:%extraversion}
+%autosetup -n %{name}-%{version}%{?extraversion:%extraversion} -p1
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 rm -rf  %{buildroot}%{_docdir}/%{name}
 
 %find_lang %{name}
