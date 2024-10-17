@@ -8,7 +8,7 @@ Version:	2.5.28
 Release:	2
 License:	GPL+
 Group:		Graphics
-Url:		http://sourceforge.net/projects/gphoto/
+Url:		https://sourceforge.net/projects/gphoto/
 Source0:	https://iweb.dl.sourceforge.net/project/gphoto/gphoto/%{version}/gphoto2-%{version}.tar.bz2
 
 BuildRequires:	cdk-devel
