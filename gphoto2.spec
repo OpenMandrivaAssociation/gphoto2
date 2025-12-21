@@ -11,6 +11,11 @@ Group:		Graphics
 Url:		https://sourceforge.net/projects/gphoto/
 Source0:	https://iweb.dl.sourceforge.net/project/gphoto/gphoto/%{version}/gphoto2-%{version}.tar.bz2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	cdk-devel
 BuildRequires:	jpeg-devel
 BuildRequires:	libaa-devel
